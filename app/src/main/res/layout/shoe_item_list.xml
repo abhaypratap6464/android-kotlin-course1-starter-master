@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="shoe_list_item"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_shoe_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:theme="@style/Theme.MaterialComponents.DayNight"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="6dp"
+        app:contentPadding="8dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_shoe_name"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/shoe_name"
+                android:textSize="@dimen/shoe_detail_text_size"
+                app:layout_constraintBaseline_toBaselineOf="@+id/set_text_shoe_name"
+                app:layout_constraintEnd_toStartOf="@+id/set_text_shoe_name"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/set_text_shoe_name"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/shoe_name"
+                android:textSize="@dimen/shoe_detail_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_shoe_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_company_name"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/company_name"
+                android:textSize="@dimen/shoe_detail_text_size"
+                app:layout_constraintBaseline_toBaselineOf="@+id/set_text_company_name"
+                app:layout_constraintEnd_toStartOf="@+id/set_text_company_name"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/set_text_company_name"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/company_name"
+                android:textSize="@dimen/shoe_detail_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_company_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_shoe_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_shoe_size"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/shoe_size"
+                android:textSize="@dimen/shoe_detail_text_size"
+                app:layout_constraintBaseline_toBaselineOf="@+id/set_text_shoe_size"
+                app:layout_constraintEnd_toStartOf="@+id/set_text_shoe_size"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/set_text_shoe_size"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/company_name"
+                android:textSize="@dimen/shoe_detail_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_shoe_size"
+                app:layout_constraintTop_toBottomOf="@+id/text_company_name" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_shoe_description"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/shoe_size"
+                android:textSize="@dimen/shoe_detail_text_size"
+                app:layout_constraintBaseline_toBaselineOf="@+id/set_text_shoe_description"
+                app:layout_constraintEnd_toStartOf="@+id/set_text_shoe_description"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/set_text_shoe_description"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/company_name"
+                android:textSize="@dimen/shoe_detail_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_shoe_description"
+                app:layout_constraintTop_toBottomOf="@+id/text_shoe_size" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

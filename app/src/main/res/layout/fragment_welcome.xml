@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="welcomeViewModel"
+            type="com.udacity.shoestore.screen.boarding.welcome.WelcomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screen.boarding.welcome.WelcomeFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_welcome_header"
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to_landing_page"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/header_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.305" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_welcome_sub_header"
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sub_header_margin_top"
+            android:lineSpacingExtra="1.2dp"
+            android:text="@string/sub_header"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sub_header_size"
+            app:layout_constraintTop_toBottomOf="@+id/text_welcome_header" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> welcomeViewModel.onContinueClicked()}"
+            android:text="@string/continue_text"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_welcome_sub_header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

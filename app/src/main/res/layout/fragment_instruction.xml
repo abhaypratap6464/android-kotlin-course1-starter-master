@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="instructionViewModel"
+            type="com.udacity.shoestore.screen.details.instruction.InstructionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screen.details.instruction.InstructionFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_welcome_header"
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction"
+            android:textColor="@color/headerText"
+            android:textSize="@dimen/header_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.167" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_welcome_one"
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sub_header_margin_top"
+            android:gravity="start"
+            android:lineSpacingExtra="1.2dp"
+            android:text="@string/welcome_text_one"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sub_header_size"
+            app:layout_constraintTop_toBottomOf="@+id/text_welcome_header" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_welcome_two"
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:lineSpacingExtra="1.2dp"
+            android:text="@string/welcome_text_two"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sub_header_size"
+            app:layout_constraintTop_toBottomOf="@+id/text_welcome_one" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> instructionViewModel.onContinueClicked()}"
+            android:text="@string/continue_text"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_welcome_two"
+            app:layout_constraintVertical_bias="0.375" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
