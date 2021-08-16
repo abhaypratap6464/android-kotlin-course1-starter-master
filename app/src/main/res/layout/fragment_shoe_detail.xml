@@ -8,7 +8,7 @@
             name="showDetailViewModel"
             type="com.udacity.shoestore.screen.details.shoedetails.ShoeDetailViewModel" />
     </data>
-
+    <!-- Linear Layout just can organize elements in horizontal and vertical so i used constraint layout -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

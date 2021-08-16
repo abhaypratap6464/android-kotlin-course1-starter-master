@@ -11,6 +11,11 @@
             type="com.udacity.shoestore.screen.boarding.login.LoginViewModel" />
     </data>
 
+    <!--  used ConstraintLayout because 1.Simple layout.
+          2. used layout_constraintBaseline_toBaselineOf so that so both button is together always
+           3. top margin is avoided
+           -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

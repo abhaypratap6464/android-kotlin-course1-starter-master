@@ -9,7 +9,7 @@
             name="activity_main"
             type="com.udacity.shoestore.MainActivity" />
     </data>
-
+<!-- used linear layout because it has only one component(fragment) and it is simple -->
     <LinearLayout
         android:id="@+id/container"
         android:layout_width="match_parent"

@@ -10,6 +10,7 @@
     </data>
 
 
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_view_shoe_item"
         android:layout_width="match_parent"
@@ -21,6 +22,8 @@
         app:cardCornerRadius="6dp"
         app:cardElevation="6dp"
         app:contentPadding="8dp">
+
+        <!-- Linear Layout just can organize elements in horizontal and vertical so i used constraint layout -->
 
 
         <androidx.constraintlayout.widget.ConstraintLayout

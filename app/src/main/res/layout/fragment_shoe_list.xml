@@ -8,7 +8,7 @@
             name="shoeListViewModel"
             type="com.udacity.shoestore.screen.details.shoelist.ShoeListViewModel" />
     </data>
-
+    <!-- I used constraint layout to position Floating button in bottom end layout -->
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
+            <!-- Linear layout with elements in vertical position like a ListView-->
             <LinearLayout
                 android:id="@+id/layout_shoe_list"
                 android:layout_width="match_parent"

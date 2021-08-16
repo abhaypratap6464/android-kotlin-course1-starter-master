@@ -10,7 +10,7 @@
             name="welcomeViewModel"
             type="com.udacity.shoestore.screen.boarding.welcome.WelcomeViewModel" />
     </data>
-
+    <!-- used ConstraintLayout to avoid top margin -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
